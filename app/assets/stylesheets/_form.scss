@@ -1,0 +1,45 @@
+.form {
+  padding: 20px 40px;
+  background-color: #ddd;
+  height: 90px;
+  &__new-message{
+    display: flex;
+    &__input-box{
+      width: 100%;
+      position: relative;
+      &__text{
+        &--inside{
+        height: 50px;
+        width: 920px;
+        border-style: none;
+        padding: 0 40px 0 10px;
+        color: #434a54;
+        margin-left: 40px;
+        }
+      }
+      &__image{
+        // display:inline-block;
+        font-size: 1.3rem;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        &__post{
+          display: none;
+        }
+      }
+    }
+    &__submit-btn{
+        &__detail {
+        height: 50px;
+        width: 100px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: #38aef0;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,54 @@
+.side {
+  background: #2f3e51;
+  height: 100vh;
+  float: left;
+  width: 300px;
+  &__top {
+    background: #253141;
+    width: 100%;
+    display: inline-block;
+    height: 100px;
+    &__user--name {
+      font-size: 16px;
+      color: #FFFFFF;
+      font-weight: bold;
+      float: left;
+      padding: 0 0 0 20px;
+      line-height: 110px;
+    }
+    i {
+      color: white;
+    }
+    &__menu__edit{
+      float: right;
+      line-height: 110px;
+      display: inline;
+      font-size: 1.3rem;
+      color: white;
+      padding-right: 5px;
+    }
+    &__menu__group{
+      float: right;
+      line-height: 110px;
+      display: inline;
+      font-size: 1.3rem;
+      color: white;
+      padding-right: 20px;
+    }
+  
+  }
+  }
+  .groups{
+    padding: 20px;
+    &__name{
+      font-size: 15px;
+      font-weight: bold;
+      color: #FFFFFF;
+    }
+    &__latest--message{
+      font-size: 11px;
+      font-weight: bold;
+      color: #FFFFFF;
+      padding-top: 5px;
+    }
+  }
