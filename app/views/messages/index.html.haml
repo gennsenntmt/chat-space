@@ -1,22 +1,21 @@
 .header
-  .header__logo
-    グループを作成しました
 .contents
-  .side
-    .side__top
-      .side__top__user--name
-        testーuser
-      .side__top__menu__group
-        = link_to "#" do
-          = fa_icon 'cog'
-      .side__top__menu__edit
-        = link_to "#" do
-          = fa_icon 'edit'
-    .groups
-      .groups__name
-        sample-group
-      .groups__latest--message
-        hello
+  = render partial: 'shared/side_bar'
+  -# .side
+  -#   .side__top
+  -#     .side__top__user--name
+  -#       testーuser
+  -#     .side__top__menu__group
+  -#       = link_to edit_user_path(current_user)  do
+  -#         = fa_icon 'cog'
+  -#     .side__top__menu__edit
+  -#       = link_to new_group_path do
+  -#         = fa_icon 'edit' 
+  -#   .groups
+  -#     .groups__name
+  -#       sample-group
+  -#     .groups__latest--message
+  -#       hello
   .main
     .main-top
       .main-top__group-box
