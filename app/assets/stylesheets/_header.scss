@@ -1,6 +1,7 @@
 .header {
   background: $mainBlueColor;
   position: fixed;
+  // z-index: 0;
   width: 100%;
   &__logo {
     color: white;

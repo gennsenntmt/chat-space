@@ -1,8 +1,8 @@
 .side-bar {
   background: #2f3e51;
-  height: 100vh;
   float: left;
   width: 300px;
+  height: 100vh;
   .header {
     background: #253141;
     width: 300px;
@@ -38,7 +38,14 @@
   }
   }
   .groups{
-    padding: 120px 20px 20px 20px;
+    padding: 20px;
+    height: calc(100vh - 100px);
+    width: 300px;
+    overflow: scroll;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
     .group{
       padding-top: 10px;
       margin-bottom: 40px;
