@@ -1,53 +1,40 @@
 .header
-  .header__logo
-    グループを作成しました
-.contents
-  .side
-    .side__top
-      .side__top__user--name
-        testーuser
-      .side__top__menu__group
-        = link_to "#" do
-          = fa_icon 'cog'
-      .side__top__menu__edit
-        = link_to "#" do
-          = fa_icon 'edit'
-    .groups
-      .groups__name
-        sample-group
-      .groups__latest--message
-        hello
-  .main
-    .main-top
-      .main-top__group-box
-        .main-top__group-box__name
-          sample
-        .main-top__group-box__menber
-          Member: test-user
-      .main-top__edit-box
-        =link_to "#", class: "main-top__edit-box__text" do
-          Edit
-    .main-messages
-      .main-messages__message
-        .main-messages__message__upper-info
-          .main-messages__message__upper-info__talker
-            test-user
-          .main-messages__message__upper-info__date
-            2019/10/08/(Tue)16:38:36
-        .main-messages__message__text
-          こんにちは！
-  .form
-    .form__new-message
-      .form__new-message__input-box
-        .form__new-message__input-box__text
-          %input.input-text{:class => "form__new-message__input-box__text--inside", :placeholder => "type a message", :type => "text" }
-        .form__new-message__input-box__image
+= render partial: 'shared/side_bar'
+.main
+  .main-top
+    .main-top__group-box
+      .main-top__group-box__name
+        =@group.name
+      .main-top__group-box__menber
+        Member: 
+        - @members.each do |member|
+          = member 
           
-          %label.upload-label{for: "upload-icon"}
-            %i.fa.fa-picture-o
-            %input{:class => "form__new-message__input-box__image__post", :type => "file", :id => "upload-icon"}   
-      .form__new-message__submit-btn
-        %input.submit-btn{:class => "form__new-message__submit-btn__detail", :type =>"submit", :value => "Send", :name => "btn" } 
+    .main-top__edit-box
+      =link_to 'edit', class: "main-top__edit-box__text" do
+        Edit
+  = render @messages
+.form
+  = form_for [@group, @message] do |f|
+    .form__input-box
+      = f.text_field :content, class: 'form__input-box__message', placeholder: 'type a message'
+      .form__input-box__mask
+        = f.label :image, class: 'form__input-box__mask__image' do
+          = fa_icon 'picture-o', class: 'form__input-box__mask__image__icon'
+          = f.file_field :image, class: 'form__input-box__mask__image__hidden'
+      = f.submit 'Send', class: 'form__input-box__submit'
+-# .form
+-#   .form__new-message
+-#     .form__new-message__input-box
+-#       .form__new-message__input-box__text
+-#         %input.input-text{:class => "form__new-message__input-box__text--inside", :placeholder => "type a message", :type => "text" }
+-#       .form__new-message__input-box__image
+        
+-#         %label.upload-label{for: "upload-icon"}
+-#           %i.fa.fa-picture-o
+-#           %input{:class => "form__new-message__input-box__image__post", :type => "file", :id => "upload-icon"}   
+-#     .form__new-message__submit-btn
+-#       %input.submit-btn{:class => "form__new-message__submit-btn__detail", :type =>"submit", :value => "Send", :name => "btn" } 
 
          
 

@@ -1,19 +1,34 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
+}
+
 .contents{
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
 .main {
   background: #fafafa;
+  height: 100vh;
+  width: calc(100vw - 300px);
+  float: right;
   &-top{
     height: 100px;
-    width: auto;
+    width: calc(100vw - 300px);
     background-color: #FFFFFF;
     border-bottom: solid 1px #eeeeee;
+    top: 0px;
+    right: 0px;
     &__group-box{
+      
       float: left;
       padding: 35px 0 15px 40px;
       &__name{
@@ -45,26 +60,30 @@
       }
     }
   }
-  &-messages{
-    height: calc(100vh - 190px);
-    &__message{
-    padding: 0 0 0 40px;
-    &__upper-info{
-        padding: 46px 0 12px 0;
-      &__talker{
-        font-size: 16px;
-        display:inline-block;
-        padding: 0 0 0 40px;
-        color: $messageColor;
-        font-weight: bold;
+  .message-box{
+    overflow: scroll;
+    height: 100px;
+    width: calc(100vw - 300px);
+    .message{
+      padding: 46px 0 40px 0;
+      width: calc(100vw - 300px);
+      height: 100px;
+      .upper-message{
+        &__user-name{
+          font-size: 16px;
+          display:inline-block;
+          padding: 0 0 0 40px;
+          color: $messageColor;
+          font-weight: bold;
+        }
+        &__date{
+          font-size: 12px;
+          display:inline-block;
+          padding-left: 10px;
+
+        }
       }
-      &__date{
-        font-size: 12px;
-        display:inline-block;
-        padding-left: 10px;
-      }
-    }
-      &__text{
+      .lower-message{
         font-size: 14px;
         color: $messageColor;
         padding-left: 40px;
@@ -73,4 +92,35 @@
     }
   }
 }
+    
+  // &-messages{
+  //   height: calc(100vh - 190px);
+  //   overflow: scroll;
+  //   width: calc(100vw - 300px);
+  //   &__message{
+  //   padding: 0 0 0 40px;
+  //   &__upper-info{
+  //       padding: 46px 0 12px 0;
+  //     &__talker{
+  //       font-size: 16px;
+  //       display:inline-block;
+  //       padding: 0 0 0 40px;
+  //       color: $messageColor;
+  //       font-weight: bold;
+  //     }
+  //     &__date{
+  //       font-size: 12px;
+  //       display:inline-block;
+  //       padding-left: 10px;
+  //     }
+  //   }
+  //     &__text{
+  //       font-size: 14px;
+  //       color: $messageColor;
+  //       padding-left: 40px;
+  //       float: left;
+  //     }
+  //   }
+  // }
+// }
 

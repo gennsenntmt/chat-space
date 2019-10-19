@@ -1,14 +1,14 @@
-.side {
+.side-bar {
   background: #2f3e51;
-  height: 100vh;
   float: left;
   width: 300px;
-  &__top {
+  height: 100vh;
+  .header {
     background: #253141;
-    width: 100%;
+    width: 300px;
     display: inline-block;
     height: 100px;
-    &__user--name {
+    &__name {
       font-size: 16px;
       color: #FFFFFF;
       font-weight: bold;
@@ -19,7 +19,7 @@
     i {
       color: white;
     }
-    &__menu__edit{
+    .edit{
       float: right;
       line-height: 110px;
       display: inline;
@@ -27,7 +27,7 @@
       color: white;
       padding-right: 5px;
     }
-    &__menu__group{
+    .group{
       float: right;
       line-height: 110px;
       display: inline;
@@ -35,20 +35,31 @@
       color: white;
       padding-right: 20px;
     }
-  
   }
   }
   .groups{
     padding: 20px;
-    &__name{
-      font-size: 15px;
-      font-weight: bold;
-      color: #FFFFFF;
-    }
-    &__latest--message{
-      font-size: 11px;
-      font-weight: bold;
-      color: #FFFFFF;
-      padding-top: 5px;
+    height: calc(100vh - 100px);
+    width: 300px;
+    overflow: scroll;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    .group{
+      padding-top: 10px;
+      margin-bottom: 40px;
+      &__name{
+        font-size: 15px;
+        color: #FFFFFF;
+        text-decoration: none;
+      }
+      &__message{
+        font-size: 11px;
+        color: #FFFFFF;
+        padding-top: 5px;
+        text-decoration: none;
+        margin-bottom: 30px;
+      }
     }
   }
