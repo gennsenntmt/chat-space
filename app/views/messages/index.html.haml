@@ -14,15 +14,6 @@
       =link_to 'edit', class: "main-top__edit-box__text" do
         Edit
   = render @messages
-  -# .main-messages
-  -#   .main-messages__message
-  -#     .main-messages__message__upper-info
-  -#       .main-messages__message__upper-info__talker
-  -#         test-user
-  -#       .main-messages__message__upper-info__date
-  -#         2019/10/08/(Tue)16:38:36
-  -#     .main-messages__message__text
-  -#       こんにちは！
 .form
   = form_for [@group, @message] do |f|
     .form__input-box
