@@ -2,45 +2,50 @@
   padding: 20px 40px;
   background-color: #ddd;
   height: 90px;
-  &__new-message{
+  display: inline-block;
+  width: 1140px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  &__input-box{
+    
     display: flex;
-    &__input-box{
-      width: 100%;
+    &__message{
+      background-color: white;
+      width: 920px;
+      height: 50px;
+      padding: 0 40px 0 10px;
+      color: #434a54;
+      border-style: none;
       position: relative;
-      &__text{
-        &--inside{
-        height: 50px;
-        width: 920px;
-        border-style: none;
-        padding: 0 40px 0 10px;
-        color: #434a54;
-        margin-left: 40px;
-        }
-      }
+    }
+    &__mask{
       &__image{
-        // display:inline-block;
+      display: inline-block;
+      position: absolute;
+      
+      &__icon{
+        display: inline-block;
         font-size: 1.3rem;
+        cursor: pointer;
         position: absolute;
         top: 10px;
         right: 10px;
-        cursor: pointer;
         margin-right: 30px;
-        &__post{
-          display: none;
-        }
       }
-    }
-    &__submit-btn{
-        &__detail {
-        height: 50px;
-        width: 100px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: #38aef0;
-        color: white;
-        cursor: pointer;
+      &__hidden{
+        display: none;
       }
     }
   }
 }
+}
 
+.form__input-box__submit{
+  height: 50px;
+  width: 100px;
+  padding: 0 30px;
+  margin-left: 15px;
+  background-color: #38aef0;
+  color: white;
+}
