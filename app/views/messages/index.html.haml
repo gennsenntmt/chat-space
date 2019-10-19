@@ -9,11 +9,13 @@
         Member: 
         - @members.each do |member|
           = member 
+
           
     .main-top__edit-box
       =link_to 'edit', class: "main-top__edit-box__text" do
         Edit
-  = render @messages
+  .messages
+    = render @messages
 .form
   = form_for [@group, @message] do |f|
     .form__input-box
