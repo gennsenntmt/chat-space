@@ -7,10 +7,16 @@
     z-index: 2;
   }
 
+  .notion {
+    background-color: $light_blue;
+    color: $white;
+    text-align: center;
+    z-index: 1;
+  }
+
   .alert {
     background-color: $alert_orange;
     color: $white;
     text-align: center;
-    // z-index: 2;
   }
 }
