@@ -9,19 +9,18 @@
         Member: 
         - @members.each do |member|
           = member 
-
-          
     .main-top__edit-box
       =link_to 'edit', class: "main-top__edit-box__text" do
         Edit
   .messages
     = render @messages
-.form
-  = form_for [@group, @message] do |f|
-    .form__input-box
-      = f.text_field :content, class: 'form__input-box__message', placeholder: 'type a message'
-      .form__input-box__mask
-        = f.label :image, class: 'form__input-box__mask__image' do
-          = fa_icon 'picture-o', class: 'form__input-box__mask__image__icon'
-          = f.file_field :image, class: 'form__input-box__mask__image__hidden'
-      = f.submit 'Send', class: 'form__input-box__submit'
+  .form
+    = form_for [@group, @message] do |f|
+      .form__input-box
+        = f.text_field :content, class: 'form__input-box__message', placeholder: 'type a message'
+        .form__input-box__mask
+          = f.label :image, class: 'form__input-box__mask__image' do
+            = fa_icon 'picture-o', class: 'form__input-box__mask__image__icon'
+            = f.file_field :image, class: 'form__input-box__mask__image__hidden'
+        = f.submit 'Send', class: 'form__input-box__submit'
+        
