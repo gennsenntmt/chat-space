@@ -9,7 +9,7 @@ $(function(){
     search_list.append(html);
   }
 
-  function appendErrMsgToHTML(user){
+  function appendErrMsgToHTML(msg){
     var html = `
     <div class="chat-group-user clearfix">
      <p class="chat-group-user__name">${msg}</p>
@@ -53,16 +53,13 @@ $(function(){
     .done(function(users){
       if (users.length === 0 ) {
         $("#user-search-result").empty();
+        appendErrMsgToHTML("一致する名前はありません");
        }
       else if (input.length !== 0){    
         $('#user-search-result').empty();
         users.forEach(function(user){
           appendUser(user)
         });
-      }
-      else {
-        $('#user-search-result').empty();
-        appendErrMsgToHTML("一致する名前はありません");
       }
     })
     .fail(function(){
