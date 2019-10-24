@@ -30,3 +30,4 @@ class MessagesController < ApplicationController
     @members = @group.users.map(&:name)
   end
 end
+
